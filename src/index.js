@@ -3,44 +3,40 @@ import route from './routes/routes.js'
 import { PORT } from '../config/config.js'
 import compression from 'compression'
 import cookieparser from 'cookie-parser'
-//Manejar rutas
+// Manejar rutas
 import path from 'path'
 import { fileURLToPath } from 'url'
 import authMiddleware from './middleware/authMiddleware.js'
 
 const app = express()
 
-//Middleware para procesar JSON y datos
+// Middleware para procesar JSON y datos
 app.use(express.json())
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({ extended: true }))
 
-//Uso de compression
-app.use(compression({
-   br:true
-}))
+// Uso de compression
+app.use(compression())
 
-//Uso de cookie-parser para manejar cookies
+// Uso de cookie-parser para manejar cookies
 app.use(cookieparser())
 
-//Manejo de sessiones 
+// Manejo de sesiones 
 app.use(authMiddleware)
 
-//Definimos rutas del proyecto
+// Definimos rutas del proyecto
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-//Vistas
-
+// Vistas
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
-
-//Archivos estaticos
-app.use(express.static(path.join(__dirname, '../public')))
+// Archivos estáticos
+app.use('/public', express.static(path.join(__dirname, '../public')))
 app.use('/bootstrap', express.static(path.join(__dirname, '../node_modules/bootstrap/dist')))
 app.use('/node_modules', express.static(path.join(__dirname, '../node_modules')))
 
-//Rutas
+// Rutas
 app.use('/', route)
 
 app.listen(PORT, () => {

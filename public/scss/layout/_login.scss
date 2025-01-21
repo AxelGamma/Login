@@ -1,0 +1,21 @@
+@use '../base/variables' as v;
+
+.bg-login{
+   background-image: url('/public/img/bg-2.svg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+}
+
+.login-form{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-color: v.$secondary;
+   opacity: 0.8;
+   border-radius: 10px;
+   padding: 20px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

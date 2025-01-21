@@ -1,0 +1,96 @@
+// Font
+$font-family-sans-serif: 'Montserrat', sans-serif;
+
+//Colors Proyecto Propio
+$secondary: #021220;
+$secondary-1:#042541;
+$secondary-2:#06345c;
+$secondary-3:#074377;
+$secondary-4:#095291;
+$secondary-5:#0b64b2;
+$secondary-dark: #191d29;
+$secondary-light: #262a37;
+
+$primary: #fbae3d;
+$primary-1:#fcbc5f;
+$primary-2:#fcc87b;
+$primary-3:#fdd497;
+$primary-light: #f6f3ff;
+$prymary-dark: #56618b;
+
+$light: #fbf9f6;
+$background:#171b25;
+$body-bg: $background;
+
+
+//Colors CargaExpress
+/* $primary: #ffc423;
+$secondary: #00457c;
+$light: #fbf9f6;
+$primary-light: #f6c02d;
+$secondary-light: rgb(64, 71, 94);
+$secondary-dark: #013560;
+$background: $light;
+$body-bg: $background;
+
+$color-one:#ffc524;
+$color-two:#ffa343;
+$color-tree:#ff845c;
+$color-four:#ff6772;
+$color-five:#e95687;
+$color-sixe:#c84f96;
+$color-seven:#9f4e9e;
+$color-eight:#724d9b;
+$color-nine:#424a8f;
+$color-ten:#00437a; */
+
+
+
+//Spacing
+$spacer: 1rem !default;
+$spacers: (
+   0: 0,
+   1: $spacer * 0.25,
+   2: $spacer * 0.5,
+   3: $spacer,
+   4: $spacer * 1.5,
+   5: $spacer * 3,
+   6: $spacer * 6,
+   7: $spacer * 8,
+   8: $spacer * 12,
+
+   ) !default;
+
+$headings-margin-bottom: $spacer * 1;
+$line-height-base: 1.7;
+
+//Navbar
+$navbar-nav-link-padding-x: 0.8rem;
+$navbar-padding-y: 1rem;
+$navbar-dark-color: #fff;
+
+//Button
+$button-radius: 10px;
+$button-padding-x: 20px;
+$button-padding-y: 5px;
+
+$btn-border-radius: $button-radius;
+$btn-border-radius-sm: $button-radius;
+$btn-border-radius-lg: $button-radius;
+
+$btn-padding-y: $button-padding-y;
+$btn-padding-y-lg: $button-padding-y;
+$btn-padding-y-sm: $button-padding-y;
+
+$btn-padding-x: $button-padding-x;
+$btn-padding-x-lg: $button-padding-x;
+$btn-padding-x-sm: $button-padding-x;
+
+$btn-toggler-border-radius: 5px;
+
+$headings-font-weight: bold;
+$btn-close-color: $primary;
+
+//IMPORTANDO BOOTSTRAP
+
+@import "../../../node_modules/bootstrap/scss/bootstrap"
